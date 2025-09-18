@@ -30,7 +30,7 @@ class FishCatch < ApplicationRecord
   }
 
   scope :with_bait_name, ->(bait_name) {
-    where(baits: {name: bait_name}) if bait_name.present?
+    where(baits: { name: bait_name }) if bait_name.present?
   }
 
   scope :with_weight_between, ->(low, high) {

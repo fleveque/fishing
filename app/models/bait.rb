@@ -14,10 +14,10 @@ class Bait < ApplicationRecord
     where(category: category) if category.present?
   }
 
-  def self.search(params={})
+  def self.search(params = {})
     sort_column =
       params[:sort]
-        .presence_in(%w{ name tackle_box_items_count }) || "id"
+        .presence_in(%w[ name tackle_box_items_count ]) || "id"
 
     sort_direction =
       sort_column == "tackle_box_items_count" ? :desc : :asc
