@@ -40,7 +40,7 @@ gem "bcrypt", "~> 3.1.7"
 
 # Downgrade to 1.3.4 to fix this Logger issue:
 # https://github.com/rails/rails/issues/54263
-gem "concurrent-ruby", "1.3.4"
+gem "concurrent-ruby", "1.3.5"
 
 group :development, :test do
   # Start debugger with binding.b [https://github.com/ruby/debug]
