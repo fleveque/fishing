@@ -1,5 +1,4 @@
 module FishCatchesHelper
-
   def total_weight(fish_catches)
     fish_catches.map(&:weight).reduce(0, &:+)
   end
@@ -30,5 +29,4 @@ module FishCatchesHelper
   def currently_sorted?(column)
     params[:sort] == column.to_s
   end
-
 end

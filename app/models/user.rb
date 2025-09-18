@@ -8,17 +8,17 @@ class User < ApplicationRecord
   validates :username, presence: true,
             uniqueness: { case_sensitive: false }
 
-  def filter_catches(params={})
-    associations = {"bait" => "baits.name"}
+  def filter_catches(params = {})
+    associations = { "bait" => "baits.name" }
 
     sort_column =
       params[:sort]
-        .presence_in(%w{ bait species weight length }) || "created_at"
+        .presence_in(%w[ bait species weight length ]) || "created_at"
 
     sort_column = associations[sort_column] || sort_column
 
     sort_direction =
-      params[:direction].presence_in(%w{ asc desc }) || "desc"
+      params[:direction].presence_in(%w[ asc desc ]) || "desc"
 
     fish_catches
       .includes(:bait)

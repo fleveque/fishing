@@ -36,5 +36,4 @@ class TackleBoxItemsController < ApplicationController
 
     redirect_to baits_url
   end
-
 end

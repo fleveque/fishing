@@ -1,5 +1,4 @@
 class BaitsController < ApplicationController
-
   def index
     @baits = Bait.search(params)
 
@@ -16,5 +15,4 @@ class BaitsController < ApplicationController
     @top_catches =
       @bait.fish_catches.order(weight: :desc).limit(10).includes(:user)
   end
-
 end

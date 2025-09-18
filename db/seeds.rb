@@ -144,7 +144,7 @@ TackleBoxItem.create!([
   {
     user: nicole,
     bait: lemon_drop
-  },
+  }
 ])
 
 #
@@ -182,7 +182,7 @@ FishCatch.create!([
     species: "Rainbow Trout",
     weight: 4.5,
     length: 22.5,
-    created_at: 1.days.ago,
+    created_at: 1.days.ago
   },
   {
     user: mike,
@@ -288,7 +288,7 @@ FishCatch.create!([
 
 baits = Bait.all
 
-names = %w(Macie Grace Walter Erin Sam Brynn Keith Wade Leroy Lucy)
+names = %w[Macie Grace Walter Erin Sam Brynn Keith Wade Leroy Lucy]
 names.each do |name|
   user =
     User.create!(

@@ -5,7 +5,7 @@ module ApplicationHelper
     "#{controller_name.underscore}_#{action_name}"
   end
 
-  def nav_link_to(text, url, options={})
+  def nav_link_to(text, url, options = {})
     link_to(text, url, options.merge(class: nav_link_class(url)))
   end
 
