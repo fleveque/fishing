@@ -30,6 +30,11 @@ class TackleBoxItemsController < ApplicationController
     # redirect_to baits_url
 
     @bait.my_tackle_box_item = @item
+
+    respond_to do |format|
+      format.turbo_stream
+      format.html { redirect_to baits_url }
+    end
   end
 
   def destroy
@@ -39,6 +44,11 @@ class TackleBoxItemsController < ApplicationController
     # redirect_to baits_url
 
     @bait = @item.bait
+
+    respond_to do |format|
+      format.turbo_stream render :create
+      format.html { redirect_to baits_url }
+    end
 
     render :create
   end
