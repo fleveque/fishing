@@ -62,4 +62,4 @@ group :test do
 end
 
 # Use Pagy for pagination
-gem "pagy", "~> 9.4"
+gem "pagy", "~> 5.10"
